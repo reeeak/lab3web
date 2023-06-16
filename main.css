@@ -1,0 +1,328 @@
+.panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: lightgray;
+    padding: 30px 10px;
+}
+
+.large-product,
+.small-product{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(183, 183, 183);
+    box-sizing: border-box;
+}
+
+.large-product {
+    width: 70%;
+}
+
+.small-product {
+    width: 28%;
+}
+
+@media (max-width: 640px) {
+    .panel {
+        display: block;
+        min-width: 510px;
+        flex-direction: column;
+    }
+
+    .large-product,
+    .small-product {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.add-panel {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Arial';
+}
+
+hr {
+    margin: 0px;
+    size: 0.01px;
+    border: 0.1px solid rgb(230, 230, 231);
+}
+
+.add-panel-one {
+    height: 31px;
+    font-size: 18px;
+    font-family: 'Arial';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-top: 0.1px solid rgb(230, 230, 231);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.name {
+    width: 100%;
+    display: flex;
+}
+
+.number {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.panel-bought {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.amount-main-panel {
+    background-color: rgb(232, 232, 232);
+    color: rgb(98, 98, 98);
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    margin: 0 7px;
+    text-align: center;
+}
+
+.text-cheese {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 20px;
+    width: 30%;
+    font-size: 13px;
+    border-color: rgb(230, 230, 231);
+    border-style: solid;
+}
+
+.bought {
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    color: rgb(100, 100, 100);
+    font-size: 14px;
+    min-height: 35px;
+    padding: 1px 20px;
+    border: 1px solid rgb(222, 222, 222);
+    box-shadow: 0px 5px rgb(207, 207, 207);
+    font-weight: bold;
+}
+
+.cancel {
+    background-color: rgb(219, 40, 40);
+    color: white;
+    height: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    display: inline;
+    padding: 1vh 2vh;
+    border-radius: 5px;
+    box-shadow: 0px 5px rgb(191, 39, 40);
+    margin-left: 5px;
+}
+
+.add-amount,
+.minus-amount,
+.minus-amount-light {
+    background-color: rgb(34, 186, 70);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    height: 35px;
+    width: 38px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px rgb(33, 163, 64);
+
+}
+
+
+.minus-amount,
+.minus-amount-light {
+    background-color: rgb(219, 40, 40);
+    box-shadow: 0px 5px rgb(191, 39, 40);
+}
+
+.minus-amount-light {
+    opacity: 0.5;
+}
+
+.text {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 18px;
+    width: 75%;
+    border-color: rgb(230, 230, 231);
+    border-style: solid;
+    text-indent: 25px;
+    height: 100%;
+}
+
+.text::placeholder {
+    color: rgb(173, 173, 174);
+}
+
+
+.button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 18px;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(34, 133, 208);
+    border: none;
+    color: white;
+    box-shadow: 0px 5px rgb(34, 118, 183);
+    font-weight: bold;
+}
+
+
+.add-panel-small,
+.add-panel-small-noBought,
+.add-panel-small-bought {
+    height: auto; 
+  font-family: 'Arial';
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 0.1px solid rgb(230, 230, 231);
+
+}
+
+.text-small-panel {
+    font-size: 18px;
+    font-family: 'Arial';
+    font-weight: bold;
+    margin: 0;
+}
+
+.product-item,
+.product-item-line {
+    display: flex;
+    background-color: rgb(232, 232, 232);
+    color: rgb(102, 102, 102);
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.amount,
+.amount-line {
+    display: flex;
+    background-color: rgb(242, 113, 29);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.amount span {
+    display: inline-block;
+    line-height: 20px;
+}
+
+.product-item-line,
+.amount-line {
+    text-decoration: line-through;
+}
+
+.badge {
+    width: 120px;
+    position: fixed;
+    bottom: -55px;
+    left: 20px;
+    background-color: rgb(175, 1, 218);
+    color: white;
+    padding: 10px 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.badge-content {
+    font-family: 'Arial';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.badge-create,
+.badge-name {
+    font-family: 'Arial';
+    margin: 0px;
+    padding: 0px;
+}
+
+.badge-create {
+    font-size: 12px;
+}
+
+.badge:hover {
+    transform: translateY(-55px);
+    background-color: rgb(77, 1, 218);
+}
+
+@media print {
+    .badge {
+        background-color: white;
+        color: rgb(175, 1, 218);
+        border: 3px solid rgb(175, 1, 218);
+        bottom: 0px;
+    }
+
+    .badge-content {
+        display: none;
+    }
+}
+
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]:after {
+    content: attr(data-tooltip);
+    font-size: 14px;
+    background-color: rgb(175, 1, 218);
+    color: white;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 1s ease;
+    transform-origin: bottom center;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
