@@ -21,7 +21,7 @@ if (productList.length === 0) {
 }
 
 function addProduct() {
-  const productName = productNameInput.value;
+  const productName = productNameInput.value.trim();
   if (productName === '') {
     alert('Введіть назву!');
     return;
@@ -63,10 +63,11 @@ function saveProductList() {
       inputElement.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
           const newName = inputElement.value.trim();
-          if (newName !== '') {
+          const existingProduct = productList.find(product => product.name.toLowerCase() === newName.toLowerCase());
+          if (newName !== '' && !existingProduct) {
             productList[index].name = newName;
           } else {
-            alert('Назва продукту не може бути порожньою!');
+            alert('Назва продукту або порожня, або вже наявна!');
             nameElement.textContent = currentName;
           }
           saveProductList();
@@ -192,7 +193,7 @@ function createCancelButtonHandler(index) {
 
 function createAddButtonHandler(index) {
     return function() {
-      productList[index].amount += 1;
+      productList[index].amount++;
       saveProductList();
       renderProductList();
     };
@@ -200,7 +201,7 @@ function createAddButtonHandler(index) {
 
   function createMinusButtonHandler(index) {
     return function() {
-      productList[index].amount -= 1;
+      productList[index].amount--;
       saveProductList();
       renderProductList();
     };
